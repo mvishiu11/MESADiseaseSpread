@@ -5,8 +5,8 @@ from mesa.visualization import (SolaraViz,
                                 make_space_component,
                                 make_plot_component)
 
-from model import InfectiousDiseaseSpreadModel
-from agents import PersonAgent
+from disease_spread.model import InfectiousDiseaseSpreadModel
+from disease_spread.agents import PersonAgent
 
 
 # --------------- portrayal ---------------

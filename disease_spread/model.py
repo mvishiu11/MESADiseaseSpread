@@ -7,7 +7,7 @@ from mesa.space import MultiGrid, PropertyLayer
 from mesa.datacollection import DataCollector
 from typing import Tuple
 
-from agents import PersonAgent
+from disease_spread.agents import PersonAgent
 
 
 class InfectiousDiseaseSpreadModel(mesa.Model):
