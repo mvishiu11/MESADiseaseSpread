@@ -2,7 +2,7 @@ import subprocess
 
 
 def main():
-    subprocess.run(["poetry", "run", "solara", "run", "disease_spread.app"])
+    subprocess.run(["poetry", "run", "solara", "run", "virusx.app"])
 
 
 if __name__ == "__main__":

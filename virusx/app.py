@@ -5,8 +5,9 @@ from mesa.visualization import (SolaraViz,
                                 make_space_component,
                                 make_plot_component)
 
-from disease_spread.model import InfectiousDiseaseSpreadModel
-from disease_spread.agents import PersonAgent
+from virusx.model import InfectiousDiseaseSpreadModel
+from virusx.agents import PersonAgent
+import matplotlib.colors as mcolors
 
 
 # --------------- portrayal ---------------
@@ -66,7 +67,18 @@ def build_page():
         height=model_params["height"],
     )
 
-    Space = make_space_component(agent_portrayal)
+    custom_cmap = mcolors.ListedColormap(["#ffffff", "#ffcccc", "#ff9999"])
+    pl_portrayal = {
+        "infection": {
+            "colormap": custom_cmap,
+            "vmin": 0.0,
+            "vmax": 0.5,
+            "alpha": 0.7,
+            "colorbar": False,
+        }
+    }
+
+    Space = make_space_component(agent_portrayal, propertylayer_portrayal=pl_portrayal)
     Plot = make_plot_component(["Interaction", "Location"])
 
     viz = SolaraViz(

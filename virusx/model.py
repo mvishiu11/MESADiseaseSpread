@@ -1,4 +1,3 @@
-
 """Core model for virus‑X spread."""
 
 from __future__ import annotations
@@ -7,7 +6,7 @@ from mesa.space import MultiGrid, PropertyLayer
 from mesa.datacollection import DataCollector
 from typing import Tuple
 
-from disease_spread.agents import PersonAgent
+from virusx.agents import PersonAgent
 
 
 class InfectiousDiseaseSpreadModel(mesa.Model):
